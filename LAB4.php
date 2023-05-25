@@ -430,20 +430,6 @@
 
     setcookie('name', '', time() - 86400);
 
-/*-- sessions --*/
-    session_start();
-    if(isset($_POST['submit'])){
-        $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
-        $password = $_POST['password'];
-
-        if($username == 'john' && $password == 'password'){
-            $_SESSION['username'] = $username;
-            header('Location: /myproject1/extras/dashboard.php');
-        } else{
-            echo 'Incorrect login';
-        }
-    }
-
 ?>
 
 <!--<a href="--><?php //echo $_SERVER['PHP_SELF']; ?><!--?name=Brad&-->
